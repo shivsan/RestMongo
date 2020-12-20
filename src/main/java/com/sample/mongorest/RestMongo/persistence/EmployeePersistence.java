@@ -1,7 +1,9 @@
 package com.sample.mongorest.RestMongo.persistence;
 
 import com.sample.mongorest.RestMongo.entity.Employee;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface EmployeePersistence {
-    Employee create(Employee employeeToBeCreated);
+@Repository
+public interface EmployeePersistence extends CrudRepository<Employee, String> {
 }

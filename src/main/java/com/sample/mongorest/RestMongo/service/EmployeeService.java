@@ -11,6 +11,6 @@ public class EmployeeService {
     }
 
     public Employee create(Employee employeeToBeCreated) {
-        return employeePersistence.create(employeeToBeCreated);
+        return employeePersistence.save(employeeToBeCreated);
     }
 }

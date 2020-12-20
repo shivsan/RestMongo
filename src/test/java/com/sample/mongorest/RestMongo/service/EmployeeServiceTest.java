@@ -28,7 +28,7 @@ class EmployeeServiceTest {
         var role = Role.Developer;
         Employee employeeToBeCreated = new Employee(firstName, lastName, role);
         Employee createdEmployee = new Employee(id, firstName, lastName, role);
-        when(this.employeePersistence.create(employeeToBeCreated)).thenReturn(createdEmployee);
+        when(this.employeePersistence.save(employeeToBeCreated)).thenReturn(createdEmployee);
 
         Employee returnedEmployee = employeeService.create(employeeToBeCreated);
 

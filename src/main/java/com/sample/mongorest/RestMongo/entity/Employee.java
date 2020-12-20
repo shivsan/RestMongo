@@ -1,6 +1,11 @@
 package com.sample.mongorest.RestMongo.entity;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Employee {
+    @Id
     private String id;
     private String firstName;
     private String lastName;
@@ -17,5 +22,9 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.role = role;
+    }
+
+    public String getId() {
+        return id;
     }
 }
