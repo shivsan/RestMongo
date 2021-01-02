@@ -19,6 +19,6 @@ public class EmployeeService {
     }
 
     public Optional<Employee> get(String employeeId) {
-        return null;
+        return employeePersistence.findById(employeeId);
     }
 }

@@ -9,6 +9,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
@@ -33,5 +35,19 @@ class EmployeeServiceTest {
         Employee returnedEmployee = employeeService.create(employeeToBeCreated);
 
         assertEquals(createdEmployee, returnedEmployee);
+    }
+
+    @Test
+    void shouldGetEmployee() {
+        var id = "1";
+        var firstName = "Shivku";
+        var lastName = "San";
+        var role = Role.Developer;
+        Employee employeeToBeReturned = new Employee(id, firstName, lastName, role);
+        when(this.employeePersistence.findById(id)).thenReturn(Optional.of(employeeToBeReturned));
+
+        Optional<Employee> returnedEmployee = employeeService.get(id);
+
+        assertEquals(employeeToBeReturned, returnedEmployee.get());
     }
 }
