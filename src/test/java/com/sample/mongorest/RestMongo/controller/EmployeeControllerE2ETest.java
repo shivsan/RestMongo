@@ -50,4 +50,20 @@ class EmployeeControllerE2ETest {
 
         assertEquals(expectedEmployee, returnedEmployee);
     }
+
+    @Test
+    void shouldGetEmployee() throws Exception {
+        Employee employeeToBeCreated = new Employee("firstName", "lastName", Role.Developer);
+        var createdEmployeeInDb = mongoTemplate.save(employeeToBeCreated);
+
+        MvcResult response = mvc.perform(
+                MockMvcRequestBuilders.get("/employee/" + createdEmployeeInDb.getId()))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andReturn();
+
+        Employee returnedEmployee = objectMapper.readValue(response.getResponse().getContentAsString(), Employee.class);
+
+        assertEquals(createdEmployeeInDb, returnedEmployee);
+    }
 }
