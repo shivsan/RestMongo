@@ -12,6 +12,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.ResponseEntity;
 
+import static java.util.Optional.of;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
@@ -24,7 +25,7 @@ class EmployeeControllerTest {
     private EmployeeController employeeController;
 
     @Test
-    void shouldCreateEmployee() throws JsonProcessingException {
+    void shouldCreateEmployee() {
         var firstName = "Shivku";
         var lastName = "San";
         var role = Role.Developer;
@@ -34,5 +35,19 @@ class EmployeeControllerTest {
         ResponseEntity<Employee> returnedEmployee = employeeController.create(employeeToBeCreated);
 
         assertEquals(createdEmployee, returnedEmployee.getBody());
+    }
+
+    @Test
+    void shouldGetEmployee() {
+        String employeeId = "id";
+        var firstName = "Shivku";
+        var lastName = "San";
+        var role = Role.Developer;
+        Employee employeeToBeReturned = new Employee(firstName, lastName, role);
+        when(this.employeeService.get(employeeId)).thenReturn(of(employeeToBeReturned));
+
+        var returnedEmployee = employeeController.get(employeeId);
+
+        assertEquals(employeeToBeReturned, returnedEmployee.getBody());
     }
 }
