@@ -53,7 +53,7 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return id == (employee.id) &&
+        return Objects.equals(id, employee.id) &&
                 firstName.equals(employee.firstName) &&
                 lastName.equals(employee.lastName) &&
                 role == employee.role;

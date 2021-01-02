@@ -1,0 +1,5 @@
+spring:
+  applcation:
+    name: RestMongo
+server:
+  port: 8080
