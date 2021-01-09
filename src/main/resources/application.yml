@@ -1,5 +1,8 @@
 spring:
   applcation:
     name: RestMongo
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/Rest
 server:
   port: 8080
