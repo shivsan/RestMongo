@@ -1,7 +1,7 @@
-package com.sample.mongorest.RestMongo.controller;
+package com.mongorest.RestMongo.controller;
 
-import com.sample.mongorest.RestMongo.entity.Employee;
-import com.sample.mongorest.RestMongo.service.EmployeeService;
+import com.mongorest.RestMongo.entity.Employee;
+import com.mongorest.RestMongo.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
-package com.sample.mongorest.RestMongo.persistence;
+package com.mongorest.RestMongo.persistence;
 
-import com.sample.mongorest.RestMongo.entity.Employee;
+import com.mongorest.RestMongo.entity.Employee;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

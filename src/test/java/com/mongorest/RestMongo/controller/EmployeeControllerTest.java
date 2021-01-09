@@ -1,10 +1,8 @@
-package com.sample.mongorest.RestMongo.controller;
+package com.mongorest.RestMongo.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sample.mongorest.RestMongo.entity.Employee;
-import com.sample.mongorest.RestMongo.entity.Role;
-import com.sample.mongorest.RestMongo.service.EmployeeService;
+import com.mongorest.RestMongo.entity.Employee;
+import com.mongorest.RestMongo.entity.Role;
+import com.mongorest.RestMongo.service.EmployeeService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

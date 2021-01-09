@@ -1,8 +1,8 @@
-package com.sample.mongorest.RestMongo.service;
+package com.mongorest.RestMongo.service;
 
-import com.sample.mongorest.RestMongo.entity.Employee;
-import com.sample.mongorest.RestMongo.entity.Role;
-import com.sample.mongorest.RestMongo.persistence.EmployeePersistence;
+import com.mongorest.RestMongo.entity.Employee;
+import com.mongorest.RestMongo.entity.Role;
+import com.mongorest.RestMongo.persistence.EmployeePersistence;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

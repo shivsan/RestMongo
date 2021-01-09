@@ -1,4 +1,4 @@
-package com.sample.mongorest.RestMongo;
+package com.mongorest.RestMongo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

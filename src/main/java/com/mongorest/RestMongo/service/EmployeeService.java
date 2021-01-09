@@ -1,7 +1,7 @@
-package com.sample.mongorest.RestMongo.service;
+package com.mongorest.RestMongo.service;
 
-import com.sample.mongorest.RestMongo.entity.Employee;
-import com.sample.mongorest.RestMongo.persistence.EmployeePersistence;
+import com.mongorest.RestMongo.entity.Employee;
+import com.mongorest.RestMongo.persistence.EmployeePersistence;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

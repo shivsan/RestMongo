@@ -1,4 +1,4 @@
-package com.sample.mongorest.RestMongo.entity;
+package com.mongorest.RestMongo.entity;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
