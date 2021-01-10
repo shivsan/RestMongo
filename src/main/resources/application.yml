@@ -3,7 +3,7 @@ spring:
     name: RestMongo
   data:
     mongodb:
-      uri: mongodb://localhost:27017/Rest
+      uri: mongodb://host.docker.internal:27017/Rest # if mongodb is running on the container, give the internal container ip
 server:
   port: 8080
 
